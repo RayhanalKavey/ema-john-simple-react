@@ -143,19 +143,6 @@
     "quantity": 0
   },
   {
-    "id": "8a5b4a9c-76ea-4fbb-9c70-9548de4eab01",
-    "category": "Men's Pants",
-    "name": "TIRO 21 TRACK PANTS",
-    "seller": "Addidas",
-    "price": 109,
-    "stock": 6,
-    "ratings": 5,
-    "ratingsCount": 1688,
-    "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9c7058d8677742ac8519ac3f009cdcf4_9366/Tiro_21_Track_Pants_Black_GH7305_21_model.jpg",
-    "shipping": 48,
-    "quantity": 0
-  },
-  {
     "id": "b357e19b-4dd9-4fc7-b5c0-9ed5255464ba",
     "category": "Men's Pants",
     "name": "PRIMEBLUE SST TRACK PANTS",
@@ -441,19 +428,7 @@
     "shipping": 35,
     "quantity": 0
   },
-  {
-    "id": "a2615943-7eeb-4d6a-ab1b-78fb51ce39da",
-    "category": "Men's Sneaker",
-    "name": "CREATOR 365 TEE",
-    "seller": "Addidas",
-    "price": 34,
-    "stock": 20,
-    "ratings": 3,
-    "ratingsCount": 4727,
-    "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/0af79283953e498480c6ac22015ec878_9366/Creator_365_Tee_Black_GL0465_21_model.jpg",
-    "shipping": 2,
-    "quantity": 0
-  },
+
   {
     "id": "27cf3efa-7352-4889-85c4-44a4de2aa93a",
     "category": "Men's Sneaker",
@@ -493,19 +468,7 @@
     "shipping": 48,
     "quantity": 0
   },
-  {
-    "id": "c6cb80a7-3542-4270-bd2b-920efd5f3f85",
-    "category": "Men's Sneaker",
-    "name": "V-DAY TEE (GENDER NEUTRAL)",
-    "seller": "Addidas",
-    "price": 18,
-    "stock": 2,
-    "ratings": 4,
-    "ratingsCount": 1590,
-    "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/abfc348baf3243289c4bada000d1238b_9366/V-Day_Tee_(Gender_Neutral)_Pink_HI6014_21_model.jpg",
-    "shipping": 13,
-    "quantity": 0
-  },
+
   {
     "id": "f54a4763-b8c2-4922-ba8d-80652a64f5bc",
     "category": "Men's Sneaker",

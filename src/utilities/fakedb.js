@@ -11,6 +11,7 @@ const getStoredCart = () => {
   }
   return shoppingCart;
 };
+
 //add
 const addToDb = (id) => {
   //   let shoppingCart = {};

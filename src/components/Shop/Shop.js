@@ -18,7 +18,7 @@ const Shop = () => {
         // console.log("products loaded");
       });
   }, []);
-  //lod from db
+  //lode from db
   useEffect(() => {
     // console.log("local storage first line");
 
@@ -40,20 +40,20 @@ const Shop = () => {
   }, [products]);
   //click event handler
   const handleAddToCart = (selectedProduct) => {
-    console.log(selectedProduct);
+    // console.log(selectedProduct);
     // console.log(cart);
     let newCart;
     const existProduct = cart.find(
       (product) => product.id === selectedProduct.id
     );
-    console.log(existProduct);
+    // console.log(existProduct);
     if (!existProduct) {
       selectedProduct.quantity = 1;
       newCart = [...cart, selectedProduct];
     } else {
       const rest = cart.filter((product) => product.id !== selectedProduct.id);
-      console.log(rest);
-      console.log(rest);
+      // console.log(rest);
+
       existProduct.quantity = existProduct.quantity + 1;
       newCart = [...rest, existProduct];
     }

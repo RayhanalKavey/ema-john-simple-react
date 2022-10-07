@@ -207,19 +207,7 @@
     "shipping": 26,
     "quantity": 0
   },
-  {
-    "id": "fd52819a-cb78-4510-ad2f-c5bdd888ae78",
-    "category": "Men's Pants",
-    "name": "FRENCH TERRY TAPERED CUFF LOGO PANTS",
-    "seller": "Addidas",
-    "price": 189,
-    "stock": 27,
-    "ratings": 3,
-    "ratingsCount": 1974,
-    "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/3fb5325716cc4e45a76bac4700ea31dc_9366/Essentials_French_Terry_Tapered_Cuff_Logo_Pants_Black_GK8968_21_model.jpg",
-    "shipping": 20,
-    "quantity": 0
-  },
+
   {
     "id": "c667d3ff-41eb-4cf7-a433-819d959ea768",
     "category": "Men's Pants",

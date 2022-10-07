@@ -28,6 +28,7 @@ const Shop = () => {
     for (const id in storedCart) {
       // console.log(id);
       const addedProduct = products.find((product) => product.id === id);
+      //?
       if (addedProduct) {
         const quantity = storedCart[id];
         addedProduct.quantity = quantity;
@@ -43,6 +44,7 @@ const Shop = () => {
     // console.log(selectedProduct);
     // console.log(cart);
     let newCart;
+    //workinG
     const existProduct = cart.find(
       (product) => product.id === selectedProduct.id
     );

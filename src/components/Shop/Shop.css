@@ -34,3 +34,18 @@
   justify-content: center;
   font-size: xx-large;
 }
+
+.order-review-btn {
+  background-color: rgba(255, 153, 0, 0.8);
+  color: aliceblue;
+  border: none;
+  width: 100%;
+  padding: 8px;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.order-review-btn:hover {
+  background-color: rgba(255, 153, 0, 0.9);
+  cursor: pointer;
+}

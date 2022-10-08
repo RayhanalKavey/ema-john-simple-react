@@ -3,7 +3,7 @@
   top: 0;
   padding: 30px 20px;
 }
-.cart button {
+.clear-cart-btn {
   font-size: 18px;
   width: 100%;
   background-color: rgba(246, 25, 25, 0.7);
@@ -17,7 +17,7 @@
   border-radius: 8px;
   margin-top: 10px;
 }
-.cart button:hover {
+.clear-cart-btn:hover {
   cursor: pointer;
   background-color: rgba(246, 25, 25, 0.9);
 }

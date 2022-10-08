@@ -1,0 +1,19 @@
+.review-item img {
+  width: 91px;
+}
+.review-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid grey;
+  width: 571px;
+  margin: 0 auto;
+  padding: 8px;
+  gap: 17px;
+}
+.review-details p {
+  margin: 0;
+}
+.review-details-container {
+  display: flex;
+  align-items: center;
+}

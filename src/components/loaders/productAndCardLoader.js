@@ -9,7 +9,7 @@ export const productAndCardLoader = async () => {
 
   // Get saved cart
   const savedCart = getStoredCart();
-  const initialProduct = [];
+  const initialCart = [];
 
   //get the id's in the saved cart
   for (const id in savedCart) {
@@ -20,10 +20,10 @@ export const productAndCardLoader = async () => {
       const quantity = savedCart[id];
       addedProduct.quantity = quantity;
       //Then push those products into a new array, which is now basically the previously added product's array.
-      initialProduct.push(addedProduct);
+      initialCart.push(addedProduct);
     }
   }
-  return { products, initialProduct };
+  return { products, initialCart };
 };
 
 //we have to do all this steps to find the previously added products with their specific added quantity. Because we saved the added product to the local storage as id and their added quantity.

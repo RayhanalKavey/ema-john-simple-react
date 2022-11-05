@@ -3,6 +3,8 @@ import "./App.css";
 import About from "./components/About/About";
 import Inventory from "./components/Inventory/Inventory";
 import { productAndCardLoader } from "./components/loaders/productAndCardLoader";
+import Login from "./components/login/Login/Login";
+import Registration from "./components/login/Registration/Registration";
 import Orders from "./components/Orders/Orders";
 import Shop from "./components/Shop/Shop";
 import Main from "./layouts/Main";
@@ -32,6 +34,8 @@ function App() {
         },
         { path: "/inventory", element: <Inventory></Inventory> },
         { path: "/about", element: <About></About> },
+        { path: "/login", element: <Login></Login> },
+        { path: "/registration", element: <Registration></Registration> },
         //---
       ],
     },

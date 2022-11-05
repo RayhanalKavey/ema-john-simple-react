@@ -29,7 +29,7 @@ const Registration = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        console.log(user);
+        alert("User created successfully");
         form.reset();
       })
       .catch((error) => console.log(error));

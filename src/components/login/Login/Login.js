@@ -21,6 +21,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        alert("User logged in successfully");
         form.reset();
         // navigate(from, { replace: true });
       })

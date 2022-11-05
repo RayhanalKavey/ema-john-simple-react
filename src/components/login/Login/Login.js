@@ -5,10 +5,10 @@ import { AuthContext } from "../../../contexts/UserContext";
 import "./Login.css";
 
 const Login = () => {
-  const { signIn, user } = useContext(AuthContext);
-  // const navigate = useNavigate();
-  // const location = useLocation();
-  // const from = location.state?.from?.pathname || "/";
+  const { signIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -23,14 +23,14 @@ const Login = () => {
         console.log(user);
         alert("User logged in successfully");
         form.reset();
-        // navigate(from, { replace: true });
+        navigate(from, { replace: true });
       })
       .catch((error) => console.error(error));
   };
 
   return (
     <div className="form-container">
-      <h2 className="form-title">Login {user?.email}</h2>
+      <h2 className="form-title">Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="email">Email</label>

@@ -8,6 +8,7 @@ import Registration from "./components/login/Registration/Registration";
 import Orders from "./components/Orders/Orders";
 import Shop from "./components/Shop/Shop";
 import Main from "./layouts/Main";
+import PrivateRoute from "./routes/PrivateRoute";
 function App() {
   const router = createBrowserRouter([
     //----------
@@ -30,7 +31,12 @@ function App() {
         {
           path: "/orders",
           loader: productAndCardLoader,
-          element: <Orders></Orders>,
+          element: (
+            <PrivateRoute>
+              {" "}
+              <Orders></Orders>
+            </PrivateRoute>
+          ),
         },
         { path: "/inventory", element: <Inventory></Inventory> },
         { path: "/about", element: <About></About> },

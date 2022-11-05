@@ -4,7 +4,21 @@ import { AuthContext } from "../../contexts/UserContext";
 import logo from "../../images/Logo.svg";
 import "./Header.css";
 const Header = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, setUser, logOut } = useContext(AuthContext);
+
+  /// Handle log out
+  const handleSignOut = () => {
+    logOut()
+      .then((result) => {
+        alert("User logged out!");
+        // navigate(from, { replace: true });
+        setUser({});
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+
   return (
     <nav className="header">
       <img src={logo} alt="" />
@@ -14,7 +28,7 @@ const Header = () => {
         <NavLink to="/inventory">Inventory</NavLink>
         <NavLink to="/about">About</NavLink>
         {user?.uid ? (
-          <NavLink className="btn-logout" onClick={logOut}>
+          <NavLink className="btn-logout" onClick={handleSignOut}>
             Log Out
           </NavLink>
         ) : (

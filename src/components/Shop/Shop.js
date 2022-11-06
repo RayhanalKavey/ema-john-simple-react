@@ -10,12 +10,20 @@ import {
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import "./Shop.css";
+
+/*
+Things needed for pagination 
+1/ Count -total amount of data
+2/ How many data per page
+3/ Identify the current page
+
+*/
 //-------------------------------------------------
 const Shop = () => {
   //notE useState
   // const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  const products = useLoaderData();
+  const { count, products } = useLoaderData();
   const clearCart = () => {
     setCart([]);
     deleteShoppingCart();

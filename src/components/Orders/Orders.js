@@ -1,3 +1,5 @@
+import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { deleteShoppingCart, removeFromDb } from "../../utilities/fakedb";
@@ -5,14 +7,17 @@ import Cart from "../Cart/Cart";
 import ReviewItem from "../ReviewItem/ReviewItem";
 import "./Orders.css";
 const Orders = () => {
+  //workinG
   const { products, initialCart } = useLoaderData();
+  // console.log(initialCart);
   const [cart, setCart] = useState(initialCart);
+  console.log(cart);
   const clearCart = () => {
     setCart([]);
     deleteShoppingCart();
   };
   const handleRemoveItems = (ID) => {
-    const remainingProducts = cart.filter((product) => product.id !== ID);
+    const remainingProducts = cart.filter((product) => product._id !== ID);
     setCart(remainingProducts);
     removeFromDb(ID);
   };
@@ -21,7 +26,7 @@ const Orders = () => {
       <div className="order-container">
         {cart.map((product) => (
           <ReviewItem
-            key={product.id}
+            key={product._id}
             product={product}
             handleRemoveItems={handleRemoveItems}
           ></ReviewItem>
@@ -37,7 +42,17 @@ const Orders = () => {
         )}
       </div>
       <div className="cart-container">
-        <Cart clearCart={clearCart} cart={cart}></Cart>
+        <Cart clearCart={clearCart} cart={cart}>
+          <Link className="order-review-btn" to="/shipping">
+            <button className="order-review-btn">
+              Proceed Shipping
+              <FontAwesomeIcon
+                // className="delete-icon"
+                icon={faArrowCircleRight}
+              ></FontAwesomeIcon>
+            </button>
+          </Link>
+        </Cart>
       </div>
     </div>
   );

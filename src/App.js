@@ -6,6 +6,7 @@ import { productAndCardLoader } from "./components/loaders/productAndCardLoader"
 import Login from "./components/login/Login/Login";
 import Registration from "./components/login/Registration/Registration";
 import Orders from "./components/Orders/Orders";
+import Shipping from "./components/Shipping/Shipping";
 import Shop from "./components/Shop/Shop";
 import Main from "./layouts/Main";
 import PrivateRoute from "./routes/PrivateRoute";
@@ -19,13 +20,8 @@ function App() {
         //---
 
         {
-          path: "/",
-          loader: () => fetch("products.json"),
-          element: <Shop></Shop>,
-        },
-        {
           path: "/shop",
-          loader: () => fetch("products.json"),
+          loader: () => fetch("http://localhost:5005/products"),
           element: <Shop></Shop>,
         },
         {
@@ -42,6 +38,7 @@ function App() {
         { path: "/about", element: <About></About> },
         { path: "/login", element: <Login></Login> },
         { path: "/registration", element: <Registration></Registration> },
+        { path: "/shipping", element: <Shipping></Shipping> },
         //---
       ],
     },

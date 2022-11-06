@@ -21,7 +21,7 @@ function App() {
 
         {
           path: "/shop",
-          loader: () => fetch("http://localhost:5005/products"),
+
           element: <Shop></Shop>,
         },
         {

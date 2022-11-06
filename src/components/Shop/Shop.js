@@ -74,8 +74,6 @@ const Shop = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("ids:", data);
-
         for (const id in storedCart) {
           const addedProduct = data.find((product) => product._id === id);
           //?

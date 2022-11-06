@@ -62,21 +62,31 @@ const Shop = () => {
   //notE lode from db
   useEffect(() => {
     const storedCart = getStoredCart();
-    // console.log(storedCart);
     const savedCart = [];
-    for (const id in storedCart) {
-      // console.log(id);
-      const addedProduct = products.find((product) => product._id === id);
-      //?
-      if (addedProduct) {
-        const quantity = storedCart[id];
-        addedProduct.quantity = quantity;
-        savedCart.push(addedProduct);
-        // console.log(savedCart);
-      }
-    }
-    setCart(savedCart);
-    // console.log("local storage finished");
+    //workinG: side effect of pagination. When we load only 10 data per page then stored products are only checked between them and as a result stored card display changed for different page. So the solution is to load data according to the stored ID from the server. Interesting thing is we use post here to lead data here. In body we send the keys and tell the server to give us that key's regarding data. This data will be displayed in the cart. We usually use get method for load data but people usually cashed the get method to preserve the loaded data. So it is risky to use get method because load data related dependency changes frequently.
+    const ids = Object.keys(storedCart);
+    fetch("http://localhost:5005/productsByIds", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(ids),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("ids:", data);
+
+        for (const id in storedCart) {
+          const addedProduct = data.find((product) => product._id === id);
+          //?
+          if (addedProduct) {
+            const quantity = storedCart[id];
+            addedProduct.quantity = quantity;
+            savedCart.push(addedProduct);
+          }
+        }
+        setCart(savedCart);
+      });
   }, [products]);
   //click event handler
   const handleAddToCart = (selectedProduct) => {
@@ -145,7 +155,7 @@ const Shop = () => {
               className={`page-number ${page === number && "selected-page"}`}
               key={number}
             >
-              {number}
+              {number + 1}
             </button>
           ))}
           <select
